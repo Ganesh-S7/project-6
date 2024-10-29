@@ -1,1 +1,1 @@
-A news website built using React.js and API
+A news website built using React.js and with the help of API
