@@ -8,9 +8,10 @@ const NewsApp = () => {
     const api_key = process.env.REACT_APP_API_KEY;
 
     const getData = async() => {
-        const response = await fetch(`https://newsapi.org/v2/everything?q=${Search}&apikey=${api_key}`);
+        const response = await fetch(`https://newsdata.io/api/1/latest?apikey=${api_key}&q=${Search}&language=en`);
         const jsonData = await response.json();
-        let sData = jsonData.articles.slice(0,50);
+        console.log(jsonData);
+        let sData = jsonData.results;
         console.log(sData);
         
         setnewsData(sData)
