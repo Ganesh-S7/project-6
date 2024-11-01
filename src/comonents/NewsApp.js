@@ -10,7 +10,7 @@ const NewsApp = () => {
     const getData = async() => {
         const response = await fetch(`https://newsdata.io/api/1/latest?apikey=${api_key}&q=${Search}&language=en`);
         const jsonData = await response.json();
-        console.log(jsonData);
+        // console.log(jsonData);
         let sData = jsonData.results;
         console.log(sData);
         
